@@ -1,11 +1,83 @@
 ---
 const year = new Date().getFullYear();
 ---
-<footer class="border-t border-surface-200 py-10 mt-auto">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<footer style="background: oklch(0.08 0.018 42); border-top: 1px solid oklch(0.67 0.13 72 / 0.14);">
+  <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 pt-16 pb-10">
+    <!-- Top row -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-14">
+      <!-- Brand block -->
+      <div class="md:col-span-2">
+        <a href="/" class="flex items-center gap-2 mb-4" aria-label="Vatted">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <ellipse cx="12" cy="5" rx="7" ry="2.5" stroke="oklch(0.67 0.13 72)" stroke-width="1.5"/>
+            <ellipse cx="12" cy="19" rx="7" ry="2.5" stroke="oklch(0.67 0.13 72)" stroke-width="1.5"/>
+            <line x1="5" y1="5" x2="5" y2="19" stroke="oklch(0.67 0.13 72)" stroke-width="1.5"/>
+            <line x1="19" y1="5" x2="19" y2="19" stroke="oklch(0.67 0.13 72)" stroke-width="1.5"/>
+          </svg>
+          <span class="font-display font-semibold text-lg"
+                style="color: oklch(0.90 0.030 82);">Vatted</span>
+        </a>
+        <p class="text-sm leading-relaxed max-w-xs"
+           style="color: oklch(0.48 0.020 58); font-family: var(--font-body); font-weight: 300;">
+          The world's first fractionalized whisky index platform. Diversified cask exposure for global investors — via crypto or fiat.
+        </p>
+        <p class="mt-5 text-xs"
+           style="color: oklch(0.38 0.015 50); font-family: var(--font-body);">
+          The whisky index for global investors.
+        </p>
+      </div>
+
+      <!-- Platform links -->
+      <div>
+        <p class="text-xs tracking-widest uppercase font-semibold mb-4"
+           style="color: oklch(0.50 0.020 58); font-family: var(--font-body);">Platform</p>
+        <ul class="space-y-3">
+          {['Indices', 'How It Works', 'Pricing', 'On-Chain Data'].map(link => (
+            <li>
+              <a href={`#${link.toLowerCase().replace(/\s+/g, '-')}`}
+                 class="text-sm transition-colors duration-150"
+                 style="color: oklch(0.55 0.022 62); font-family: var(--font-body);"
+                 onmouseover="this.style.color='oklch(0.74 0.11 80)'"
+                 onmouseout="this.style.color='oklch(0.55 0.022 62)'">
+                {link}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Company links -->
+      <div>
+        <p class="text-xs tracking-widest uppercase font-semibold mb-4"
+           style="color: oklch(0.50 0.020 58); font-family: var(--font-body);">Company</p>
+        <ul class="space-y-3">
+          {['Insights', 'About', 'Risk Disclosure', 'Privacy Policy'].map(link => (
+            <li>
+              <a href={link === 'Insights' ? '/blog' : `#${link.toLowerCase().replace(/\s+/g, '-')}`}
+                 class="text-sm transition-colors duration-150"
+                 style="color: oklch(0.55 0.022 62); font-family: var(--font-body);"
+                 onmouseover="this.style.color='oklch(0.74 0.11 80)'"
+                 onmouseout="this.style.color='oklch(0.55 0.022 62)'">
+                {link}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <!-- Gold divider -->
+    <div class="h-px mb-8" style="background: linear-gradient(to right, transparent, oklch(0.67 0.13 72 / 0.25), transparent);"></div>
+
+    <!-- Bottom row -->
     <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-      <p class="text-sm font-semibold text-surface-900 font-display">Your New Business</p>
-      <p class="text-sm text-surface-800/50">&copy; {year} Your New Business. All rights reserved.</p>
+      <p class="text-xs" style="color: oklch(0.38 0.015 50); font-family: var(--font-body);">
+        &copy; {year} Vatted Ltd. All rights reserved.
+      </p>
+      <p class="text-xs max-w-md leading-relaxed"
+         style="color: oklch(0.35 0.012 48); font-family: var(--font-body);">
+        Vatted is not a regulated financial product. Whisky investment involves risk. Past index performance does not guarantee future returns. For information purposes only.
+      </p>
     </div>
   </div>
 </footer>

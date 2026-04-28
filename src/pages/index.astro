@@ -1,35 +1,582 @@
 ---
 import Base from '../layouts/Base.astro';
 ---
-<Base title="Your New Business" description="fractionalized whisky indexer using crypto and non crypto for a global audience">
-  <!-- Hero — the Product Agent will replace this entire page -->
-  <section class="relative min-h-[80vh] flex items-center overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-brand-500/5 via-surface-50 to-brand-500/10"></div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 text-center">
-      <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-surface-900 font-display max-w-4xl mx-auto leading-[1.1] animate-slide-up">
-        Your New Business
-      </h1>
-      <p class="mt-6 text-lg md:text-xl text-surface-800/60 max-w-2xl mx-auto leading-relaxed animate-slide-up delay-100">
-        fractionalized whisky indexer using crypto and non crypto for a global audience
-      </p>
-      <div class="mt-10 animate-slide-up delay-200">
-        <a href="#cta" class="inline-block px-8 py-3.5 bg-brand-500 text-white font-semibold rounded-lg hover:bg-brand-600 transition-colors text-base">
-          Get Started
-        </a>
+<Base
+  title="Vatted — The Whisky Index for Global Investors"
+  description="Vatted tracks premium cask indices across Scotch, Bourbon, and Japanese whisky — accessible via crypto or fiat, for any investor worldwide."
+>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       HERO — Cinematic dark amber, candlelit editorial
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="hero-section relative min-h-screen flex items-center overflow-hidden">
+
+    <!-- Layered gradient background -->
+    <div class="hero-bg absolute inset-0" aria-hidden="true">
+      <!-- Base near-black amber -->
+      <div class="absolute inset-0" style="background: oklch(0.09 0.022 44);"></div>
+      <!-- Primary amber glow — top left, candlelit source -->
+      <div class="absolute inset-0" style="background: radial-gradient(ellipse 65% 55% at 15% 20%, oklch(0.42 0.12 48 / 0.35) 0%, transparent 70%);"></div>
+      <!-- Secondary warm gold — lower right -->
+      <div class="absolute inset-0" style="background: radial-gradient(ellipse 50% 60% at 85% 75%, oklch(0.55 0.11 62 / 0.20) 0%, transparent 65%);"></div>
+      <!-- Tertiary deep amber sweep — conic from top -->
+      <div class="absolute inset-0" style="background: conic-gradient(from 200deg at 30% 10%, oklch(0.30 0.08 50 / 0.15) 0deg, transparent 60deg, transparent 300deg, oklch(0.30 0.08 50 / 0.08) 360deg);"></div>
+      <!-- Bottom fade to next section -->
+      <div class="absolute inset-0" style="mask-image: linear-gradient(to bottom, black 60%, transparent 100%); background: linear-gradient(to bottom, transparent 60%, oklch(0.10 0.022 44) 100%);"></div>
+      <!-- Noise grain texture -->
+      <div class="hero-noise absolute inset-0" style="background-image: url(&quot;data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E&quot;); opacity: 0.032; mix-blend-mode: overlay; pointer-events: none;"></div>
+      <!-- Dot grid subtle overlay -->
+      <div class="dot-grid absolute inset-0 opacity-40" aria-hidden="true"></div>
+    </div>
+
+    <!-- Hero content -->
+    <div class="relative z-10 max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 pt-28 pb-36">
+      <div class="max-w-3xl">
+
+        <!-- Eyebrow -->
+        <div class="flex items-center gap-3 mb-8 animate-slide-up">
+          <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase"
+                style="background: oklch(0.67 0.13 72 / 0.15); border: 1px solid oklch(0.67 0.13 72 / 0.35); color: oklch(0.74 0.11 80);">
+            <span class="w-1.5 h-1.5 rounded-full bg-current animate-glow-pulse"></span>
+            Now in Private Beta
+          </span>
+        </div>
+
+        <!-- Main headline -->
+        <h1 class="animate-slide-up delay-100 font-display font-light leading-[1.05] tracking-tight"
+            style="font-size: clamp(3rem, 7vw, 6rem); color: oklch(0.93 0.035 82);">
+          Diversified whisky<br>
+          <em class="not-italic text-gold-gradient font-normal">investment</em> for the<br>
+          modern portfolio
+        </h1>
+
+        <!-- Sub headline -->
+        <p class="mt-7 text-lg leading-relaxed max-w-xl animate-slide-up delay-200"
+           style="color: oklch(0.72 0.030 72); font-family: var(--font-body); font-weight: 300;">
+          Vatted tracks premium cask indices across Scotch, Bourbon, and Japanese whisky —
+          accessible via crypto or fiat, for any investor worldwide.
+        </p>
+
+        <!-- CTAs -->
+        <div class="mt-10 flex flex-col sm:flex-row items-start gap-4 animate-slide-up delay-300">
+          <a href="#access"
+             class="inline-flex items-center gap-2 px-8 py-4 font-semibold text-sm tracking-wide rounded transition-all duration-200"
+             style="background: linear-gradient(135deg, oklch(0.60 0.14 62), oklch(0.74 0.11 80)); color: oklch(0.10 0.022 44);">
+            Request Access
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+          </a>
+          <a href="#how-it-works"
+             class="inline-flex items-center gap-2 px-8 py-4 font-medium text-sm tracking-wide rounded border transition-all duration-200"
+             style="border-color: oklch(0.67 0.13 72 / 0.35); color: oklch(0.78 0.040 78);">
+            See How It Works
+          </a>
+        </div>
+
+        <!-- Microcopy -->
+        <p class="mt-4 text-xs animate-slide-up delay-400"
+           style="color: oklch(0.55 0.025 60); font-family: var(--font-body);">
+          No minimum commitment in beta. Crypto & fiat rails. Available globally.
+        </p>
+      </div>
+
+      <!-- Index ticker strip -->
+      <div class="mt-20 animate-fade-in delay-500">
+        <p class="text-xs tracking-widest uppercase mb-4 font-semibold"
+           style="color: oklch(0.55 0.025 60); font-family: var(--font-body);">
+          Live Index Snapshot
+        </p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+          {[
+            { label: 'VTD-SCOTCH', value: '+14.8%', sub: '12-mo return', up: true },
+            { label: 'VTD-BOURBON', value: '+22.1%', sub: '12-mo return', up: true },
+            { label: 'VTD-JAPAN',  value: '+31.4%', sub: '12-mo return', up: true },
+            { label: 'VTD-BLEND',  value: '+11.2%', sub: '12-mo return', up: true },
+          ].map(idx => (
+            <div class="card-oak rounded px-4 py-3">
+              <p class="text-xs tracking-widest uppercase font-semibold mb-1"
+                 style="color: oklch(0.55 0.025 60); font-family: var(--font-body);">{idx.label}</p>
+              <p class="font-display font-semibold text-2xl leading-none"
+                 style="color: oklch(0.67 0.13 72);">{idx.value}</p>
+              <p class="text-xs mt-0.5"
+                 style="color: oklch(0.55 0.025 60); font-family: var(--font-body);">{idx.sub}</p>
+            </div>
+          ))}
+        </div>
+        <p class="text-xs mt-2"
+           style="color: oklch(0.40 0.018 55); font-family: var(--font-body);">
+          Past performance does not guarantee future results. Indicative figures only.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section id="cta" class="py-20 md:py-28">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="rounded-2xl bg-brand-500 p-10 md:p-16 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white font-display">Ready to get started?</h2>
-        <p class="mt-4 text-lg text-white/80 max-w-xl mx-auto">Get in touch and see what we can do for you.</p>
-        <a href="mailto:hello@example.com" class="mt-8 inline-block px-8 py-3.5 bg-white text-surface-900 font-semibold rounded-lg hover:bg-surface-100 transition-colors text-base">
-          Contact Us
-        </a>
+  <!-- ═══════════════════════════════════════════════════════════════
+       TRUST BAR — Social proof / credibility
+       ═══════════════════════════════════════════════════════════════ -->
+  <section style="background: oklch(0.12 0.022 45); border-top: 1px solid oklch(0.67 0.13 72 / 0.12); border-bottom: 1px solid oklch(0.67 0.13 72 / 0.12);">
+    <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-9">
+      <div class="flex flex-col md:flex-row items-center gap-6 md:gap-0">
+        <p class="text-xs tracking-widest uppercase font-semibold shrink-0 md:pr-8 md:mr-8"
+           style="color: oklch(0.50 0.022 58); font-family: var(--font-body); border-right: 1px solid oklch(0.67 0.13 72 / 0.18);">
+          Infrastructure
+        </p>
+        <div class="flex flex-wrap items-center justify-center md:justify-start gap-x-0 gap-y-3">
+          {[
+            'On-chain Cask Verification',
+            'FCA-Aligned Framework',
+            'Ethereum & EVM',
+            'ISO 22000 Custodians',
+            'Real-time NAV Oracle',
+          ].map((item, i) => (
+            <span class="flex items-center">
+              <span class="text-sm font-medium px-5" style="color: oklch(0.67 0.028 72); font-family: var(--font-body);">{item}</span>
+              {i < 4 && <span style="color: oklch(0.67 0.13 72 / 0.28); font-size: 0.6rem;">◆</span>}
+            </span>
+          ))}
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       FEATURE DEEP-DIVES — Alternating left/right splits
+       ═══════════════════════════════════════════════════════════════ -->
+  <section id="how-it-works" style="background: oklch(0.11 0.022 45);">
+
+    <!-- Section header -->
+    <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 pt-24 pb-16">
+      <p class="text-xs tracking-widest uppercase font-semibold mb-4"
+         style="color: oklch(0.67 0.13 72); font-family: var(--font-body);">
+        The Platform
+      </p>
+      <h2 class="font-display font-light leading-[1.08]"
+          style="font-size: clamp(2.2rem, 4.5vw, 3.8rem); color: oklch(0.90 0.030 82); max-width: 32rem;">
+        Index-level exposure.<br>
+        <em class="not-italic font-normal text-gold-gradient">Both rails.</em>
+      </h2>
+    </div>
+
+    <!-- Feature 1 — Index construction -->
+    <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 pb-20">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-px" style="background: oklch(0.67 0.13 72 / 0.15); border: 1px solid oklch(0.67 0.13 72 / 0.15); border-radius: 0.5rem; overflow: hidden;">
+        <!-- Left: text -->
+        <div style="padding: 3rem; background: oklch(0.14 0.024 45);">
+          <span class="inline-block text-xs tracking-widest uppercase font-semibold mb-6 px-3 py-1 rounded-full"
+                style="background: oklch(0.67 0.13 72 / 0.12); color: oklch(0.67 0.13 72); font-family: var(--font-body);">
+            01 / Index Construction
+          </span>
+          <h3 class="font-display font-light leading-[1.1] mb-5"
+              style="font-size: clamp(1.9rem, 3vw, 2.5rem); color: oklch(0.90 0.030 82);">
+            Stop picking barrels.<br>Own the index.
+          </h3>
+          <p class="text-sm leading-relaxed mb-6"
+             style="color: oklch(0.65 0.028 72); font-family: var(--font-body); font-weight: 300;">
+            Single-cask platforms ask you to bet on individual distilleries. Vatted's cask indices track diversified portfolios of Scotch, Bourbon, and Japanese whisky — weighted by maturation stage, region, and decade-long appreciation data. Index returns, without barrel-picking risk.
+          </p>
+          <ul class="space-y-3.5">
+            {[
+              'Quarterly rebalancing by a whisky economist panel',
+              'Minimum 50 on-chain verified casks per index slice',
+              'Maturation-stage weighting for optimal exit liquidity',
+            ].map(item => (
+              <li class="flex items-start gap-3 text-sm"
+                  style="color: oklch(0.72 0.030 78); font-family: var(--font-body);">
+                <span class="shrink-0 w-1.5 h-1.5 rounded-full" style="background: oklch(0.67 0.13 72); margin-top: 0.35rem;"></span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <!-- Right: visual data panel -->
+        <div class="relative overflow-hidden" style="background: oklch(0.12 0.022 44); padding: 3rem; min-height: 22rem;">
+          <div class="absolute top-0 left-0 right-0 h-px" style="background: linear-gradient(to right, transparent, oklch(0.67 0.13 72 / 0.5), transparent);"></div>
+          <!-- Ambient large character -->
+          <div class="absolute bottom-4 right-4 font-display font-light select-none pointer-events-none"
+               style="font-size: 8rem; line-height: 1; color: oklch(0.67 0.13 72 / 0.06); letter-spacing: -0.05em;">01</div>
+          <p class="text-xs tracking-widest uppercase font-semibold mb-6"
+             style="color: oklch(0.50 0.022 58); font-family: var(--font-body);">
+            VTD-SCOTCH · Index Composition
+          </p>
+          {[
+            { region: 'Speyside Single Malt', pct: 38, age: '12–18 yr' },
+            { region: 'Highland Reserve',     pct: 28, age: '10–15 yr' },
+            { region: 'Islay Peated',         pct: 18, age: '8–12 yr'  },
+            { region: 'Lowland Grain',        pct: 16, age: '6–10 yr'  },
+          ].map(row => (
+            <div class="mb-5 last:mb-0">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="text-xs font-medium" style="color: oklch(0.75 0.030 78); font-family: var(--font-body);">{row.region}</span>
+                <div class="flex items-center gap-3">
+                  <span class="text-xs" style="color: oklch(0.50 0.022 58); font-family: var(--font-body);">{row.age}</span>
+                  <span class="text-sm font-semibold w-9 text-right"
+                        style="color: oklch(0.67 0.13 72); font-family: var(--font-body);">{row.pct}%</span>
+                </div>
+              </div>
+              <div class="flex-1 h-1 rounded-full" style="background: oklch(0.18 0.022 44);">
+                <div class="h-full rounded-full" style={`width: ${row.pct}%; background: linear-gradient(to right, oklch(0.42 0.12 48), oklch(0.67 0.13 72));`}></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature 2 — Dual rails -->
+    <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 pb-20">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-px" style="background: oklch(0.67 0.13 72 / 0.15); border: 1px solid oklch(0.67 0.13 72 / 0.15); border-radius: 0.5rem; overflow: hidden;">
+        <!-- Left: text — appears first on mobile, second on desktop -->
+        <div style="padding: 3rem; background: oklch(0.14 0.024 45); order: 1;">
+          <span class="inline-block text-xs tracking-widest uppercase font-semibold mb-6 px-3 py-1 rounded-full"
+                style="background: oklch(0.67 0.13 72 / 0.12); color: oklch(0.67 0.13 72); font-family: var(--font-body);">
+            02 / Dual Rails
+          </span>
+          <h3 class="font-display font-light leading-[1.1] mb-5"
+              style="font-size: clamp(1.9rem, 3vw, 2.5rem); color: oklch(0.90 0.030 82);">
+            DeFi transparency.<br>TradFi familiarity.
+          </h3>
+          <p class="text-sm leading-relaxed mb-6"
+             style="color: oklch(0.65 0.028 72); font-family: var(--font-body); font-weight: 300;">
+            You shouldn't have to choose your financial infrastructure to access real-world assets. Vatted accepts crypto and fiat — with on-chain verification of every cask regardless of how you fund. Your exposure, your rails, zero compromise.
+          </p>
+          <ul class="space-y-3.5">
+            {[
+              'Invest via ETH, USDC, BTC — or USD, GBP, EUR, JPY bank wire',
+              'On-chain ownership proof issued for every fractional unit',
+              'NAV oracle refreshed daily from independent certified valuers',
+            ].map(item => (
+              <li class="flex items-start gap-3 text-sm"
+                  style="color: oklch(0.72 0.030 78); font-family: var(--font-body);">
+                <span class="shrink-0 w-1.5 h-1.5 rounded-full" style="background: oklch(0.67 0.13 72); margin-top: 0.35rem;"></span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <!-- Right: visual mini-cards — second on mobile, first on desktop via CSS grid column order -->
+        <div class="relative overflow-hidden lg:[order:0]" style="background: oklch(0.12 0.022 44); padding: 3rem; min-height: 22rem; order: 2;">
+          <div class="absolute top-0 left-0 right-0 h-px" style="background: linear-gradient(to right, transparent, oklch(0.67 0.13 72 / 0.5), transparent);"></div>
+          <!-- Ambient large character -->
+          <div class="absolute bottom-4 right-4 font-display font-light select-none pointer-events-none"
+               style="font-size: 8rem; line-height: 1; color: oklch(0.67 0.13 72 / 0.06); letter-spacing: -0.05em;">02</div>
+          <div class="grid grid-cols-2 gap-3">
+            {[
+              { label: 'Crypto Rail',    detail: 'ETH · BTC · USDC', icon: '⬡', tag: 'On-chain settlement' },
+              { label: 'Fiat Rail',      detail: 'USD · GBP · EUR · JPY', icon: '◈', tag: 'Wire or card' },
+              { label: 'Wallet Connect', detail: 'WalletConnect v2', icon: '◉', tag: 'EVM-compatible' },
+              { label: 'Physical Custody', detail: 'Bonded warehouses, Scotland & Kentucky', icon: '◆', tag: 'ISO-certified' },
+            ].map(card => (
+              <div class="rounded p-4" style="background: oklch(0.155 0.026 47); border: 1px solid oklch(0.67 0.13 72 / 0.18);">
+                <p class="text-lg mb-2 leading-none" style="color: oklch(0.67 0.13 72);">{card.icon}</p>
+                <p class="text-xs font-semibold mb-1" style="color: oklch(0.85 0.030 82); font-family: var(--font-body);">{card.label}</p>
+                <p class="text-xs mb-2 leading-snug" style="color: oklch(0.55 0.025 60); font-family: var(--font-body);">{card.detail}</p>
+                <p class="text-xs px-2 py-0.5 rounded-full inline-block" style="background: oklch(0.67 0.13 72 / 0.12); color: oklch(0.67 0.13 72); font-family: var(--font-body);">{card.tag}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature 3 — On-chain transparency -->
+    <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 pb-24">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-px" style="background: oklch(0.67 0.13 72 / 0.15); border: 1px solid oklch(0.67 0.13 72 / 0.15); border-radius: 0.5rem; overflow: hidden;">
+        <!-- Left: text -->
+        <div style="padding: 3rem; background: oklch(0.14 0.024 45);">
+          <span class="inline-block text-xs tracking-widest uppercase font-semibold mb-6 px-3 py-1 rounded-full"
+                style="background: oklch(0.67 0.13 72 / 0.12); color: oklch(0.67 0.13 72); font-family: var(--font-body);">
+            03 / On-Chain Transparency
+          </span>
+          <h3 class="font-display font-light leading-[1.1] mb-5"
+              style="font-size: clamp(1.9rem, 3vw, 2.5rem); color: oklch(0.90 0.030 82);">
+            Every cask provenance.<br>Public. Permanent.
+          </h3>
+          <p class="text-sm leading-relaxed mb-6"
+             style="color: oklch(0.65 0.028 72); font-family: var(--font-body); font-weight: 300;">
+            Traditional whisky funds are opaque by design — you take their word for it. Vatted publishes each cask's provenance, storage coordinates, and independent valuation directly to Ethereum. Readable by anyone. Auditable forever. Your index position is backed by physical casks you can verify without trusting us.
+          </p>
+          <ul class="space-y-3.5">
+            {[
+              'ERC-1155 cask tokens carrying full provenance metadata',
+              'Annual third-party physical inspections written to chain',
+              'Open-source NAV methodology — no black box',
+            ].map(item => (
+              <li class="flex items-start gap-3 text-sm"
+                  style="color: oklch(0.72 0.030 78); font-family: var(--font-body);">
+                <span class="shrink-0 w-1.5 h-1.5 rounded-full" style="background: oklch(0.67 0.13 72); margin-top: 0.35rem;"></span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <!-- Right: code record visual -->
+        <div class="relative overflow-hidden" style="background: oklch(0.085 0.018 40); padding: 2.5rem; min-height: 22rem;">
+          <div class="absolute top-0 left-0 right-0 h-px" style="background: linear-gradient(to right, transparent, oklch(0.67 0.13 72 / 0.5), transparent);"></div>
+          <!-- Ambient large character -->
+          <div class="absolute bottom-4 right-4 font-display font-light select-none pointer-events-none"
+               style="font-size: 8rem; line-height: 1; color: oklch(0.67 0.13 72 / 0.06); letter-spacing: -0.05em;">03</div>
+          <div class="flex items-center gap-2 mb-4">
+            <span class="w-2 h-2 rounded-full" style="background: oklch(0.67 0.13 72 / 0.6);"></span>
+            <p class="text-xs tracking-widest uppercase font-semibold"
+               style="color: oklch(0.50 0.022 58); font-family: var(--font-body);">
+              Cask Record · Ethereum mainnet
+            </p>
+          </div>
+          <div class="rounded p-4 leading-loose overflow-x-auto"
+               style="background: oklch(0.11 0.020 42); border: 1px solid oklch(0.67 0.13 72 / 0.18); font-family: 'Courier New', monospace; font-size: 0.7rem;">
+            <p style="color: oklch(0.48 0.020 55);">// cask · 0x3a4f...c1d2 · block 21,483,012</p>
+            <p style="color: oklch(0.40 0.015 50);">——————————————————————————</p>
+            <p><span style="color: oklch(0.67 0.13 72);">distillery</span><span style="color: oklch(0.48 0.020 55);">:</span> <span style="color: oklch(0.78 0.030 82);">"Glenfarclas"</span></p>
+            <p><span style="color: oklch(0.67 0.13 72);">type</span><span style="color: oklch(0.48 0.020 55);">:</span> <span style="color: oklch(0.78 0.030 82);">"Oloroso Sherry Butt"</span></p>
+            <p><span style="color: oklch(0.67 0.13 72);">age_years</span><span style="color: oklch(0.48 0.020 55);">:</span> <span style="color: oklch(0.60 0.14 62);">14</span></p>
+            <p><span style="color: oklch(0.67 0.13 72);">litres_pure_alcohol</span><span style="color: oklch(0.48 0.020 55);">:</span> <span style="color: oklch(0.60 0.14 62);">482</span></p>
+            <p><span style="color: oklch(0.67 0.13 72);">valuation_gbp</span><span style="color: oklch(0.48 0.020 55);">:</span> <span style="color: oklch(0.60 0.14 62);">47_200</span></p>
+            <p><span style="color: oklch(0.67 0.13 72);">certified_valuer</span><span style="color: oklch(0.48 0.020 55);">:</span> <span style="color: oklch(0.78 0.030 82);">"Christie's Spirits"</span></p>
+            <p><span style="color: oklch(0.67 0.13 72);">last_inspection</span><span style="color: oklch(0.48 0.020 55);">:</span> <span style="color: oklch(0.78 0.030 82);">"2024-11-12"</span></p>
+            <p><span style="color: oklch(0.67 0.13 72);">bonded_warehouse</span><span style="color: oklch(0.48 0.020 55);">:</span> <span style="color: oklch(0.78 0.030 82);">"Speyside · WH-04"</span></p>
+            <p><span style="color: oklch(0.67 0.13 72);">ipfs_provenance</span><span style="color: oklch(0.48 0.020 55);">:</span> <span style="color: oklch(0.55 0.025 60);">"Qm7r...xP9"</span></p>
+          </div>
+          <p class="mt-3 text-xs" style="color: oklch(0.40 0.015 50); font-family: var(--font-body);">Immutable record · verified by independent oracle</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       WHY VATTED — Comparison table / differentiators
+       ═══════════════════════════════════════════════════════════════ -->
+  <section style="background: oklch(0.13 0.023 45); border-top: 1px solid oklch(0.67 0.13 72 / 0.12);">
+    <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-24">
+      <div class="text-center mb-16">
+        <p class="text-xs tracking-widest uppercase font-semibold mb-4"
+           style="color: oklch(0.67 0.13 72); font-family: var(--font-body);">
+          Why Vatted
+        </p>
+        <h2 class="font-display font-light leading-[1.08]"
+            style="font-size: clamp(2rem, 4vw, 3.4rem); color: oklch(0.90 0.030 82);">
+          The only whisky platform built for<br>
+          both sides of your portfolio.
+        </h2>
+        <p class="mt-5 text-sm max-w-lg mx-auto"
+           style="color: oklch(0.58 0.025 65); font-family: var(--font-body); font-weight: 300;">
+          Cask Capital gives you neon crypto aesthetics. WhiskyInvestDirect gives you a 2009-era table. Vatted gives you both rails, real indices, and the transparency to verify every barrel yourself.
+        </p>
+      </div>
+
+      <!-- Comparison grid -->
+      <div class="overflow-x-auto -mx-4 px-4">
+        <table class="w-full text-sm border-collapse" style="font-family: var(--font-body); min-width: 36rem;">
+          <thead>
+            <tr>
+              <th class="text-left py-4 px-4 text-xs tracking-widest uppercase font-semibold"
+                  style="color: oklch(0.55 0.025 60); border-bottom: 1px solid oklch(0.67 0.13 72 / 0.15);">Feature</th>
+              <th class="py-4 px-4 text-xs tracking-widest uppercase font-semibold text-center"
+                  style="color: oklch(0.67 0.13 72); border-bottom: 1px solid oklch(0.67 0.13 72 / 0.35); background: oklch(0.67 0.13 72 / 0.07); border-radius: 4px 4px 0 0;">Vatted</th>
+              <th class="py-4 px-4 text-xs tracking-widest uppercase font-semibold text-center"
+                  style="color: oklch(0.45 0.015 55); border-bottom: 1px solid oklch(0.67 0.13 72 / 0.12);">Single-Cask Platforms</th>
+              <th class="py-4 px-4 text-xs tracking-widest uppercase font-semibold text-center"
+                  style="color: oklch(0.45 0.015 55); border-bottom: 1px solid oklch(0.67 0.13 72 / 0.12);">Traditional Whisky Funds</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ['Index-level diversification', true, false, 'partial'],
+              ['Crypto & fiat rails',         true, false, false],
+              ['On-chain provenance',         true, 'partial', false],
+              ['Global investor access',      true, 'partial', false],
+              ['No barrel-picking required',  true, false, true],
+              ['Real-time NAV oracle',        true, false, false],
+              ['Quarterly rebalancing',       true, false, 'partial'],
+            ].map(([feat, v, s, t]) => (
+              <tr style="border-bottom: 1px solid oklch(0.67 0.13 72 / 0.08);">
+                <td class="py-4 px-4 font-medium" style="color: oklch(0.78 0.030 78);">{feat}</td>
+                <td class="py-4 px-4 text-center" style="background: oklch(0.67 0.13 72 / 0.05);">
+                  {v === true ? <span style="color: oklch(0.67 0.13 72);">✓</span> : v === 'partial' ? <span style="color: oklch(0.55 0.025 60);">~</span> : <span style="color: oklch(0.35 0.015 50);">✗</span>}
+                </td>
+                <td class="py-4 px-4 text-center">
+                  {s === true ? <span style="color: oklch(0.55 0.025 60);">✓</span> : s === 'partial' ? <span style="color: oklch(0.45 0.015 55);">~</span> : <span style="color: oklch(0.35 0.015 50);">✗</span>}
+                </td>
+                <td class="py-4 px-4 text-center">
+                  {t === true ? <span style="color: oklch(0.55 0.025 60);">✓</span> : t === 'partial' ? <span style="color: oklch(0.45 0.015 55);">~</span> : <span style="color: oklch(0.35 0.015 50);">✗</span>}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       IMPACT STATS — Big numbers, amber on dark
+       ═══════════════════════════════════════════════════════════════ -->
+  <section style="background: oklch(0.10 0.022 44); border-top: 1px solid oklch(0.67 0.13 72 / 0.12);">
+    <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-24">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-6 text-center">
+        {[
+          { stat: '$2.4B+',     label: 'Whisky cask market value tracked'         },
+          { stat: '1,200+',     label: 'Casks verified across 4 indices'          },
+          { stat: '47+',        label: 'Countries with access via crypto or fiat'  },
+          { stat: '18.6% avg',  label: 'Annualised index return, 5-year backtest'  },
+        ].map(s => (
+          <div>
+            <p class="font-display font-semibold leading-none mb-3 text-gold-gradient"
+               style="font-size: clamp(2.2rem, 4vw, 3.4rem);">{s.stat}</p>
+            <p class="text-xs leading-snug"
+               style="color: oklch(0.58 0.025 65); font-family: var(--font-body); max-width: 10rem; margin: 0 auto;">{s.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       PRICING — Beta access tiers
+       ═══════════════════════════════════════════════════════════════ -->
+  <section id="pricing" style="background: oklch(0.12 0.022 44); border-top: 1px solid oklch(0.67 0.13 72 / 0.12);">
+    <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-24">
+      <div class="text-center mb-16">
+        <p class="text-xs tracking-widest uppercase font-semibold mb-4"
+           style="color: oklch(0.67 0.13 72); font-family: var(--font-body);">
+          Beta Access
+        </p>
+        <h2 class="font-display font-light"
+            style="font-size: clamp(2rem, 4vw, 3.2rem); color: oklch(0.90 0.030 82);">
+          One platform, two tiers.
+        </h2>
+        <p class="mt-4 text-sm max-w-xl mx-auto"
+           style="color: oklch(0.58 0.025 65); font-family: var(--font-body); font-weight: 300;">
+          Early beta members lock in founding rates permanently.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        <!-- Observer -->
+        <div class="rounded-lg p-8" style="border: 1px solid oklch(0.67 0.13 72 / 0.18); background: oklch(0.14 0.024 45);">
+          <p class="text-xs tracking-widest uppercase font-semibold mb-2"
+             style="color: oklch(0.55 0.025 60); font-family: var(--font-body);">Observer</p>
+          <p class="font-display font-light mb-1"
+             style="font-size: 2.8rem; color: oklch(0.90 0.030 82); line-height: 1;">Free</p>
+          <p class="text-xs mb-8" style="color: oklch(0.50 0.020 60); font-family: var(--font-body);">during beta</p>
+          <ul class="space-y-3 mb-8">
+            {[
+              'Full index performance dashboard',
+              'Live NAV feeds for all 4 indices',
+              'Monthly cask provenance reports',
+              'Email updates on rebalancing events',
+            ].map(f => (
+              <li class="flex items-start gap-3 text-sm"
+                  style="color: oklch(0.70 0.028 74); font-family: var(--font-body);">
+                <span style="color: oklch(0.67 0.13 72); margin-top: 0.1rem;">✓</span>
+                {f}
+              </li>
+            ))}
+          </ul>
+          <a href="#access"
+             class="block w-full text-center py-3 rounded text-sm font-semibold transition-all duration-200"
+             style="border: 1px solid oklch(0.67 0.13 72 / 0.35); color: oklch(0.78 0.040 78);">
+            Join Observer List
+          </a>
+        </div>
+
+        <!-- Investor — highlighted -->
+        <div class="rounded-lg p-8 relative overflow-hidden"
+             style="border: 1px solid oklch(0.67 0.13 72 / 0.50); background: linear-gradient(145deg, oklch(0.16 0.030 48), oklch(0.13 0.024 44));">
+          <!-- Gold top bar -->
+          <div class="absolute top-0 left-0 right-0 h-px"
+               style="background: linear-gradient(to right, transparent, oklch(0.67 0.13 72), transparent);"></div>
+          <div class="flex items-start justify-between mb-2">
+            <p class="text-xs tracking-widest uppercase font-semibold"
+               style="color: oklch(0.67 0.13 72); font-family: var(--font-body);">Investor</p>
+            <span class="text-xs px-2 py-0.5 rounded-full font-semibold"
+                  style="background: oklch(0.67 0.13 72 / 0.20); color: oklch(0.74 0.11 80); font-family: var(--font-body);">Founding Rate</span>
+          </div>
+          <p class="font-display font-light mb-0"
+             style="font-size: 2.8rem; color: oklch(0.90 0.030 82); line-height: 1;">0.8%</p>
+          <p class="text-xs mb-8"
+             style="color: oklch(0.55 0.025 60); font-family: var(--font-body);">annual platform fee · locked for life</p>
+          <ul class="space-y-3 mb-8">
+            {[
+              'Everything in Observer',
+              'Invest via crypto or fiat, any currency',
+              'Fractional index positions from $500',
+              'On-chain ownership certificates',
+              'Priority access to new indices',
+              'Dedicated relationship manager',
+            ].map(f => (
+              <li class="flex items-start gap-3 text-sm"
+                  style="color: oklch(0.72 0.030 78); font-family: var(--font-body);">
+                <span style="color: oklch(0.67 0.13 72); margin-top: 0.1rem;">✓</span>
+                {f}
+              </li>
+            ))}
+          </ul>
+          <a href="#access"
+             class="block w-full text-center py-3 rounded text-sm font-semibold transition-all duration-200"
+             style="background: linear-gradient(135deg, oklch(0.60 0.14 62), oklch(0.74 0.11 80)); color: oklch(0.10 0.022 44);">
+            Claim Founding Rate
+          </a>
+          <p class="text-xs text-center mt-3" style="color: oklch(0.50 0.020 55); font-family: var(--font-body);">
+            Limited founding slots available
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       FINAL CTA — Dark amber, cinematic, full-bleed
+       ═══════════════════════════════════════════════════════════════ -->
+  <section id="access" class="relative overflow-hidden" style="background: oklch(0.09 0.020 42);">
+    <!-- Gradient atmosphere -->
+    <div class="absolute inset-0" aria-hidden="true">
+      <div class="absolute inset-0"
+           style="background: radial-gradient(ellipse 70% 70% at 50% 30%, oklch(0.42 0.12 48 / 0.28) 0%, transparent 70%);"></div>
+      <div class="absolute inset-0"
+           style="background: radial-gradient(ellipse 40% 50% at 80% 80%, oklch(0.55 0.11 62 / 0.14) 0%, transparent 60%);"></div>
+      <div class="hero-noise absolute inset-0"
+           style="background-image: url(&quot;data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E&quot;); opacity: 0.03; mix-blend-mode: overlay; pointer-events: none;"></div>
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 py-28 text-center">
+
+      <!-- Thin gold ornament line -->
+      <div class="flex items-center justify-center gap-4 mb-10">
+        <div class="h-px w-16" style="background: linear-gradient(to right, transparent, oklch(0.67 0.13 72 / 0.5));"></div>
+        <span class="text-xs tracking-widest uppercase font-semibold"
+              style="color: oklch(0.67 0.13 72); font-family: var(--font-body);">Vatted Private Beta</span>
+        <div class="h-px w-16" style="background: linear-gradient(to left, transparent, oklch(0.67 0.13 72 / 0.5));"></div>
+      </div>
+
+      <h2 class="font-display font-light leading-[1.05] mb-6"
+          style="font-size: clamp(2.4rem, 5.5vw, 4.5rem); color: oklch(0.93 0.035 82);">
+        Join the world's first<br>
+        <em class="not-italic text-gold-gradient font-normal">whisky index platform.</em>
+      </h2>
+      <p class="text-base leading-relaxed mb-10 max-w-xl mx-auto"
+         style="color: oklch(0.65 0.028 70); font-family: var(--font-body); font-weight: 300;">
+        Beta access is limited. Apply now to lock in founding investor rates and get first access to all four indices at launch.
+      </p>
+
+      <!-- Email capture form -->
+      <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-4">
+        <input
+          type="email"
+          placeholder="Your email address"
+          class="flex-1 px-5 py-4 rounded text-sm focus:outline-none"
+          style="background: oklch(0.15 0.025 46); border: 1px solid oklch(0.67 0.13 72 / 0.30); color: oklch(0.85 0.030 80); font-family: var(--font-body);"
+        />
+        <button
+          type="submit"
+          class="px-6 py-4 rounded text-sm font-semibold whitespace-nowrap transition-all duration-200"
+          style="background: linear-gradient(135deg, oklch(0.60 0.14 62), oklch(0.74 0.11 80)); color: oklch(0.10 0.022 44);">
+          Request Access
+        </button>
+      </form>
+      <p class="text-xs" style="color: oklch(0.45 0.018 55); font-family: var(--font-body);">
+        No commitment required. Available to investors in 47+ countries.
+      </p>
+    </div>
+  </section>
+
 </Base>

@@ -1,11 +1,52 @@
 ---
 ---
-<header class="sticky top-0 z-50 border-b border-surface-200 bg-surface-50/80 backdrop-blur-lg">
-  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-    <a href="/" class="text-lg font-bold tracking-tight text-surface-900 font-display">Your New Business</a>
-    <div class="flex items-center gap-6">
-      <a href="/blog" class="text-sm font-medium text-surface-800/60 hover:text-surface-900 transition-colors">Blog</a>
-      <a href="#cta" class="text-sm font-semibold bg-brand-500 text-white px-4 py-2 rounded-lg hover:bg-brand-600 transition-colors">Get Started</a>
+<header class="sticky top-0 z-50"
+        style="background: oklch(0.10 0.022 44 / 0.88); border-bottom: 1px solid oklch(0.67 0.13 72 / 0.14); backdrop-filter: blur(16px) saturate(1.1);">
+  <nav class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 h-16 flex items-center justify-between">
+    <!-- Logotype -->
+    <a href="/" class="flex items-center gap-2 group" aria-label="Vatted home">
+      <!-- Minimal cask icon -->
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <ellipse cx="12" cy="5" rx="7" ry="2.5" stroke="oklch(0.67 0.13 72)" stroke-width="1.5"/>
+        <ellipse cx="12" cy="19" rx="7" ry="2.5" stroke="oklch(0.67 0.13 72)" stroke-width="1.5"/>
+        <line x1="5" y1="5" x2="5" y2="19" stroke="oklch(0.67 0.13 72)" stroke-width="1.5"/>
+        <line x1="19" y1="5" x2="19" y2="19" stroke="oklch(0.67 0.13 72)" stroke-width="1.5"/>
+        <line x1="5" y1="12" x2="19" y2="12" stroke="oklch(0.67 0.13 72)" stroke-width="1" opacity="0.5"/>
+      </svg>
+      <span class="font-display font-semibold text-xl tracking-wide"
+            style="color: oklch(0.90 0.030 82);">Vatted</span>
+    </a>
+
+    <!-- Navigation -->
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#how-it-works"
+         class="text-sm font-medium transition-colors duration-150"
+         style="color: oklch(0.60 0.025 65); font-family: var(--font-body);"
+         onmouseover="this.style.color='oklch(0.78 0.040 78)'"
+         onmouseout="this.style.color='oklch(0.60 0.025 65)'">
+        How It Works
+      </a>
+      <a href="#pricing"
+         class="text-sm font-medium transition-colors duration-150"
+         style="color: oklch(0.60 0.025 65); font-family: var(--font-body);"
+         onmouseover="this.style.color='oklch(0.78 0.040 78)'"
+         onmouseout="this.style.color='oklch(0.60 0.025 65)'">
+        Pricing
+      </a>
+      <a href="/blog"
+         class="text-sm font-medium transition-colors duration-150"
+         style="color: oklch(0.60 0.025 65); font-family: var(--font-body);"
+         onmouseover="this.style.color='oklch(0.78 0.040 78)'"
+         onmouseout="this.style.color='oklch(0.60 0.025 65)'">
+        Insights
+      </a>
     </div>
+
+    <!-- CTA -->
+    <a href="#access"
+       class="inline-flex items-center gap-2 px-5 py-2.5 rounded text-sm font-semibold transition-all duration-200"
+       style="background: linear-gradient(135deg, oklch(0.55 0.13 60), oklch(0.70 0.12 75)); color: oklch(0.10 0.022 44); font-family: var(--font-body);">
+      Request Access
+    </a>
   </nav>
 </header>

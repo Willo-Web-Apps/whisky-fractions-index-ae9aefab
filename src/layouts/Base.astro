@@ -8,7 +8,7 @@ interface Props {
   description?: string;
 }
 
-const { title = "Your New Business", description = "fractionalized whisky indexer using crypto and non crypto for a global audience" } = Astro.props;
+const { title = "Vatted — The Whisky Index for Global Investors", description = "Vatted tracks premium cask indices across Scotch, Bourbon, and Japanese whisky — accessible via crypto or fiat, for any investor worldwide." } = Astro.props;
 ---
 <!doctype html>
 <html lang="en" class="scroll-smooth">
@@ -23,13 +23,13 @@ const { title = "Your New Business", description = "fractionalized whisky indexe
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Your New Business",
-      "description": "fractionalized whisky indexer using crypto and non crypto for a global audience",
+      "name": "Vatted",
+      "description": "The world's first fractionalized whisky index platform — giving global investors diversified exposure to premium whisky casks through both crypto and traditional fiat rails.",
       "url": "https://whisky-fractions-index.onrender.com"
     }
     </script>
   </head>
-  <body class="min-h-screen flex flex-col bg-surface-50 text-surface-900 font-body antialiased">
+  <body class="min-h-screen flex flex-col font-body antialiased" style="background: oklch(0.09 0.020 42); color: oklch(0.85 0.030 80);">
     <Header />
     <main class="flex-1">
       <slot />
